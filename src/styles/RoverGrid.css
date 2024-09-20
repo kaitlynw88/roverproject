@@ -14,11 +14,14 @@
 }
 
 .evenTile{
-    background-color: rgb(224, 255, 255);
+    background-color: #e77d11;
+    background: linear-gradient(to right,#e77d11, #c1440e,)
 }
 
 .oddTile{
-    background-color: rgb(173, 216, 230)
+    /* background-color: #c1440e;
+    background: linear-gradient(0%#c1440e 70% #e77d11); */
+    background:linear-gradient(to right, #c1440e, #e77d11)
 }
 
 .compass{
@@ -30,7 +33,7 @@
     bottom: 52px;
     height:156px;
     width:156px;
-    z-index: 10;
+    z-index: 300;
 }
 .compassCenter{
     background-image: url("../assets/compass.png");
@@ -39,9 +42,10 @@
         height: 50px;
         width: 50px;
 }
-button{
+.compass button{
     width:52px;
     height:52px;
+    background-color: #fda600;
 }
 
 .icon{

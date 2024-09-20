@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowUp, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import GridTile from './GridTile';
 import "../styles/RoverGrid.css"
+// import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 function RoverGrid(props) {
     const vertical = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -45,26 +46,41 @@ function RoverGrid(props) {
                 } else {
                     setLocX(8);
                 }
+                break;
+            }
+            default: {
+                return;
             }
         }
-        setMove("")
+        setMove("");
     },[move])
-
 
   return (
       <div className="grid">
           <div className="compass">
-              <button className="buttonUp" onClick={() => setMove("up")}>
+              <button
+                  className="buttonUp"
+                  onClick={() => setMove("up")}
+              >
                   <FontAwesomeIcon className="icon up" icon={faArrowUp} />
               </button>
-              <button className="buttonRight" onClick={() => setMove("right")}>
+              <button
+                  className="buttonRight"
+                  onClick={() => setMove("right")}
+              >
                   <FontAwesomeIcon className="icon right" icon={faArrowRight} />
               </button>
               <div className="compassCenter"></div>
-              <button className="buttonDown" onClick={() => setMove("down")}>
+              <button
+                  className="buttonDown"
+                  onClick={() => setMove("down")}
+              >
                   <FontAwesomeIcon className="icon down" icon={faArrowDown} />
               </button>
-              <button className="buttonLeft" onClick={() => setMove("left")}>
+              <button
+                  className="buttonLeft"
+                  onClick={() => setMove("left")}
+              >
                   <FontAwesomeIcon className="icon left" icon={faArrowLeft} />
               </button>
           </div>
@@ -73,13 +89,13 @@ function RoverGrid(props) {
                   let indexSum =
                       vertical.indexOf(verticalNum) +
                       horizontal.indexOf(horizontalNum);
-                    let object ={
-                        x: horizontalNum,
-                        y: verticalNum
-                    }
-                    array.push(object)
+                  let object = {
+                      x: horizontalNum,
+                      y: verticalNum,
+                  };
+                  array.push(object);
                   return (
-                      <>
+                      <div>
                           <GridTile
                               number={indexSum}
                               vertical={verticalNum}
@@ -89,8 +105,9 @@ function RoverGrid(props) {
                               index={array.indexOf(object)}
                               array={array}
                               rockArray={props.rockArray}
+                              iceArray={props.iceArray}
                           />
-                      </>
+                      </div>
                   );
               })
           )}

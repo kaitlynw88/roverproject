@@ -1,0 +1,15 @@
+.water {
+    background-image: url("../assets/meltingIce.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+    position: absolute;
+}
+
+.found {
+    background-color: rgb(75, 224, 0);
+    position: absolute;
+}
