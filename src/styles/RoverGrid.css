@@ -1,0 +1,79 @@
+
+.grid{
+    width:800px;
+    height:800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridTile{
+    color:black;
+    height:100px;
+    width:100px;
+    position: relative;
+}
+
+.evenTile{
+    background-color: rgb(224, 255, 255);
+}
+
+.oddTile{
+    background-color: rgb(173, 216, 230)
+}
+
+.compass{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 52px;
+    bottom: 52px;
+    height:156px;
+    width:156px;
+    z-index: 10;
+}
+.compassCenter{
+    background-image: url("../assets/compass.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 50px;
+}
+button{
+    width:52px;
+    height:52px;
+}
+
+.icon{
+    height: 40px;
+    width:40px
+}
+
+.buttonUp {
+    position: absolute;
+    top: 0;
+    right: 52px;
+}
+
+.buttonDown{
+    position: absolute;
+    bottom:0;
+    right:52px;
+}
+
+.buttonRight{
+    position: absolute;
+    right:0%;
+    bottom: 52px;
+}
+
+.buttonLeft {
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+}
+
+
+.container{
+    position: relative;
+}

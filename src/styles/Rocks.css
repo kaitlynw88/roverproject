@@ -1,0 +1,10 @@
+.rocks {
+    background-image: url("../assets/rockObstacle.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+    position:absolute;
+}

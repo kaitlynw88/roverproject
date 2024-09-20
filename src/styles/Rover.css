@@ -1,0 +1,14 @@
+.rover{
+    background-image: url("../assets/roverIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100px;
+    width:100px;
+    z-index: 200;
+    position: absolute;
+}
+
+.crashed {
+    color: red;
+    position:absolute;
+}
