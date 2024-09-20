@@ -6,15 +6,12 @@ function GridTile(props) {
     let locationY = props.locationY
     const [hasRock, setHasRock] = useState(false);
 
-    console.log(locationX, locationY)
-
 useEffect(()=>{
-    props.rockArray.map((item)=>{
+    setHasRock(false)
+    props.rockArray.forEach((item)=>{
         if(props.array[item]["x"] === locationX && props.array[item]["y"] === locationY){
             setHasRock(true)
-        }else{
-            setHasRock(false)
-            console.log("false")
+            return
         }   
         
     })

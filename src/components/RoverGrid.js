@@ -4,12 +4,11 @@ import { faArrowDown, faArrowUp, faArrowRight, faArrowLeft } from '@fortawesome/
 import GridTile from './GridTile';
 import "../styles/RoverGrid.css"
 
-function RoverGrid() {
+function RoverGrid(props) {
     const vertical = [1, 2, 3, 4, 5, 6, 7, 8];
     const horizontal = [1, 2, 3, 4, 5, 6, 7, 8]
-    const rockArray = [60, 61];
     const [move, setMove] = useState("")
-    const [locX, setLocX] = useState(6)
+    const [locX, setLocX] = useState(1)
     const [locY, setLocY] = useState(1)
     
     let array = []
@@ -89,7 +88,7 @@ function RoverGrid() {
                               locationY={locY}
                               index={array.indexOf(object)}
                               array={array}
-                              rockArray={rockArray}
+                              rockArray={props.rockArray}
                           />
                       </>
                   );
