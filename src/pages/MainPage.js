@@ -35,7 +35,7 @@ function MainPage() {
     };
 
     const randomNumberGen = () => {
-        //Calculate an array of random numbers for tiles with Ice. Ice should not be placed on startng tile
+        //Calculate an array of random numbers for tiles with Ice. Ice should not be placed on starting tile
         for (let i = 1; i <= 6; i++) {
             let random1 = Math.floor(Math.random() * 64) + 2;
             if (random1 !== 56) {
@@ -55,12 +55,13 @@ function MainPage() {
             }
         }
     };
-
+    
     randomNumberGen();
 
+   
     const refresh = () => {
         setDifficulty("");
-        randomNumberGen();
+        setMartian(false)
     };
   return (
       <>

@@ -14,8 +14,8 @@ function RoverGrid(props) {
     const [locX, setLocX] = useState(1)
     const [locY, setLocY] = useState(1)
     //Alien starts at (X = 8, Y = 8)
-    const [alienLocX, setAlienLocX] = useState(8)
-    const [alienLocY, setAlienLocY] = useState(8);
+    const [alienLocX, setAlienLocX] = useState(null)
+    const [alienLocY, setAlienLocY] = useState(null);
 
     const alienMovement = ()=>{
         let randomAlien = Math.floor(Math.random() * 4) + 1
@@ -62,9 +62,10 @@ function RoverGrid(props) {
     let array = []
 
     useEffect(()=>{
-        if(props.Martian){
+        if(props.martian){
             alienMovement()
         }
+
         switch (move) {
             case "up": {
                 if (locY < 8) {
