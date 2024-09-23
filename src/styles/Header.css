@@ -1,0 +1,40 @@
+.header {
+    text-align: left;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 a {
+    font-size: 2.75rem;
+    font-style: italic;
+    color: #451804;
+}
+.header h1 a:hover{
+    color: #c1440e;
+    transition-property: color;
+        transition-duration: 0.3s;
+}
+
+.navBar {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialIcon, .navBar a{
+        color: #451804;
+        font-size: 1.5rem;
+}
+
+.socialIcon:hover, .navBar a:hover{
+    color: #c1440e;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.navSocials :first-child{
+    margin-right: 10px;
+}

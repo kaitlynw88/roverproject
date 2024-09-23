@@ -1,0 +1,21 @@
+.aboutPage h2{
+    font-size: 2rem;
+    color: #451804;
+}
+
+.aboutPage h3{
+    color: #c1440e;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: left;
+    background-color: transparent;
+    border-bottom: 2px solid #c1440e;;
+}
+
+.aboutPage p a{
+    color: #c1440e;
+}
+
+.aboutPage p a:hover{
+    text-decoration: underline;
+}

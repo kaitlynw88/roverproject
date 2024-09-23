@@ -33,8 +33,12 @@ useEffect(()=>{
             return;
         }
     });
+    if (props.iceArray.length === 0) {
+        setGameOver(true);
+    }
     // eslint-disable-next-line
-},[locationX, locationY])
+},[locationX, locationY, gameOver])
+
 
     return (
         <div>
