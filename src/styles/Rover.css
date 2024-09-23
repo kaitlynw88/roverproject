@@ -16,3 +16,7 @@ h3{
     color:white;
     background-color: black;
 }
+
+.refreshGame{
+    z-index: 400;
+}

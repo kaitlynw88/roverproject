@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowUp, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import GridTile from './GridTile';
 import "../styles/RoverGrid.css"
+import { v4 as uuidv4 } from "uuid";
 // import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 function RoverGrid(props) {
@@ -53,6 +54,7 @@ function RoverGrid(props) {
             }
         }
         setMove("");
+        // eslint-disable-next-line
     },[move])
 
   return (
@@ -95,7 +97,7 @@ function RoverGrid(props) {
                   };
                   array.push(object);
                   return (
-                      <div>
+                      <div key={uuidv4()}>
                           <GridTile
                               number={indexSum}
                               vertical={verticalNum}

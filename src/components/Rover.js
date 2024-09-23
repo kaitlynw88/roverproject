@@ -11,6 +11,9 @@ function Rover(props) {
           <h3>I crashed :(</h3>
         </div>
       }
+      {props.game ? <button className="refreshGame" onClick={()=>window.location.reload()}>Game Over</button>
+      :<></>
+      }
     </>
   )
 }

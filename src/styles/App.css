@@ -46,9 +46,16 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
     flex-direction: column;
     align-items: center;
 }
+.hero h3{
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+}
 .hero p{
     color: white;
-    font-size: 2rem;
+    font-size: 1.25rem;
+    width:60%;
+    text-align: center;
 }
 button{
     border-radius: 2rem;
