@@ -62,7 +62,9 @@ function RoverGrid(props) {
     let array = []
 
     useEffect(()=>{
-        alienMovement()
+        if(props.Martian){
+            alienMovement()
+        }
         switch (move) {
             case "up": {
                 if (locY < 8) {
