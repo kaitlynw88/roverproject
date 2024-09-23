@@ -10,12 +10,59 @@ function RoverGrid(props) {
     const vertical = [1, 2, 3, 4, 5, 6, 7, 8];
     const horizontal = [1, 2, 3, 4, 5, 6, 7, 8]
     const [move, setMove] = useState("")
+    //rover starts at (X = 1, Y = 1)
     const [locX, setLocX] = useState(1)
     const [locY, setLocY] = useState(1)
+    //Alien starts at (X = 8, Y = 8)
+    const [alienLocX, setAlienLocX] = useState(8)
+    const [alienLocY, setAlienLocY] = useState(8);
+
+    const alienMovement = ()=>{
+        let randomAlien = Math.floor(Math.random() * 4) + 1
+            switch (randomAlien) {
+                case 1: {
+                    if (alienLocY < 8) {
+                        setAlienLocY((count) => count + 1);
+                    } else {
+                        setAlienLocY(1);
+                    }
+                    break;
+                }
+                case 2: {
+                    if (alienLocX < 8) {
+                        setAlienLocX((count) => count + 1);
+                    } else {
+                        setAlienLocX(1);
+                    }
+                    break;
+                }
+                case 3: {
+                    if (alienLocY > 1) {
+                        setAlienLocY((count) => count - 1);
+                    } else {
+                        setAlienLocY(8);
+                    }
+                    break;
+                }
+                case 4: {
+                    if (alienLocX > 1) {
+                        setAlienLocX((count) => count - 1);
+                    } else {
+                        setAlienLocX(8);
+                    }
+                    break;
+                }
+                default: {
+                    return;
+                }
+            }
+            
+    }
     
     let array = []
 
     useEffect(()=>{
+        alienMovement()
         switch (move) {
             case "up": {
                 if (locY < 8) {
@@ -108,6 +155,9 @@ function RoverGrid(props) {
                               array={array}
                               rockArray={props.rockArray}
                               iceArray={props.iceArray}
+                              alienX={alienLocX}
+                              alienY={alienLocY}
+                              martian={props.martian}
                           />
                       </div>
                   );

@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function MainPage() {
     const [difficulty, setDifficulty] = useState();
+    const [martian, setMartian] = useState(false);
     const rockArray = [];
     const iceArray = [];
 
@@ -21,8 +22,14 @@ function MainPage() {
                 setDifficulty(20);
                 break;
             }
+            case "martian": {
+                setDifficulty(22);
+                setMartian(true)
+                break;
+            }
             default: {
                 setDifficulty("");
+                setMartian(false)
             }
         }
     };
@@ -62,7 +69,7 @@ function MainPage() {
                   <button className="refreshButton" onClick={refresh}>
                       Restart Game
                   </button>
-                  <RoverGrid rockArray={rockArray} iceArray={iceArray} />
+                  <RoverGrid rockArray={rockArray} iceArray={iceArray} martian={martian}/>
               </>
           ) : (
               <>
@@ -81,6 +88,7 @@ function MainPage() {
                               <option value="easy">Easy</option>
                               <option value="medium">Medium</option>
                               <option value="hard">Hard</option>
+                              <option value="martian">The Martian</option>
                           </select>
                       </form>
                   </div>
