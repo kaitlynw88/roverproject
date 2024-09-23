@@ -8,9 +8,10 @@
     position: absolute;
 }
 
-.crashed {
+.crashed, .martianAttack {
     background-color: rgba(255, 35, 30, 0.5);
     position:absolute;
+    z-index: 400;
 }
 h3{
     color:white;

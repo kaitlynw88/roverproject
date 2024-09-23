@@ -12,6 +12,13 @@ function Rover(props) {
                   <h3>I crashed 😫</h3>
               </div>
           )}
+          {!props.martianAttack ? (
+              <div className="rover alive"></div>
+          ) : (
+              <div className="rover martianAttack">
+                  <h3>A green thing just attacked me 👽</h3>
+              </div>
+          )}
           {props.game ? (
               <p className="refreshGame">
                   <span>Game Over:</span>
